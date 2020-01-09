@@ -41,7 +41,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 <body>
     <nav class="top-nav">
         <div class="top-nav-title">
-            <a href="http://duckidentity.com/"><span>Duck</span>Identity</a>
+            <a href="http://duckidentity.com/"><span>Duck</span><k style="color: #ffcc00         ">Identity</k></a>
         </div>
         <div class="top-nav-links">
             <?= $this->Html->link(__('Utilizadores'), ['action' => '../utilizador/']) ?>
