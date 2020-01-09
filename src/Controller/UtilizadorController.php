@@ -38,7 +38,7 @@ class UtilizadorController extends AppController //Controlador do Utilizador
                 $this->Flash->success(__('O Utilizador foi atualizado.'));
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('Seu artigo não pôde ser atualizado.'));
+            $this->Flash->error(__('O Utilizador não pôde ser atualizado.'));
         }
 
         $this->set('utilizador', $utilizadores);

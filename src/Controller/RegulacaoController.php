@@ -35,7 +35,7 @@ class RegulacaoController extends AppController //Controlador das Regulações
         if ($this->request->is(['post', 'put'])) {
             $this->Regulacao->patchEntity($regulacao, $this->request->getData());
             if ($this->Regulacao->save($regulacao)) {
-                $this->Flash->success(__('O Utilizador foi atualizado.'));
+                $this->Flash->success(__('O regulamento foi atualizado.'));
                 return $this->redirect(['action' => 'index']);
             }
             $this->Flash->error(__('Seu artigo não pôde ser atualizado.'));

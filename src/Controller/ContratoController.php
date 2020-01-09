@@ -6,8 +6,11 @@ class ContratoController extends AppController //Controlador do Contrato
 {
     public function index() //Land Page do contrato onde será listado os registo existentes na tabela
     {
-        $this->loadComponent('Paginator');
-        $contratos = $this->Paginator->paginate($this->Contrato->find());
+        $this->paginate = [
+            'contain' => ['Utilizador','Empresa']
+        ];
+        $contratos = $this->paginate($this->Contrato);
+
         $this->set(compact('contratos'));
     }
     public function view($id) //Visualização de um registo específico
@@ -38,7 +41,7 @@ class ContratoController extends AppController //Controlador do Contrato
                 $this->Flash->success(__('O Contrato foi atualizado.'));
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('Seu artigo não pôde ser atualizado.'));
+            $this->Flash->error(__('O contrato não pôde ser atualizado.'));
         }
 
         $this->set('contrato', $contratos);

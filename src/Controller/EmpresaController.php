@@ -38,7 +38,7 @@ class EmpresaController extends AppController //Controlador da Empresa
                 $this->Flash->success(__('A empresa foi atualizado.'));
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('Seu artigo não pôde ser atualizado.'));
+            $this->Flash->error(__('A empresa não pôde ser atualizado.'));
         }
 
         $this->set('empresa', $empresa);
